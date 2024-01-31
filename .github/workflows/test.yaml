@@ -25,5 +25,7 @@ jobs:
         ref: main
 
     - name: Display folder contents
-      run: ls
+      run: |
+          cd my-submodule
+          ls
 
