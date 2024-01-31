@@ -17,7 +17,7 @@ jobs:
         ref: main
         pr_branch: main  # This is not a valid input for actions/checkout. Remove it.
         target_branch: main  # This is not a valid input for actions/checkout. Remove it.
-        base_branch: test
+        base_branch: main
 
     - name: Checkout repository again
       uses: actions/checkout@v4.1.1
