@@ -11,14 +11,13 @@ jobs:
     permissions: 
       contents: write
     steps:
-    - uses: actions/checkout@v4.1.1
-    - run: |
-          echo "Content to be added" > new_fileqwe2.txt
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "generated"
-          git push
+    -uses: 
+        with:
+            #token: ${{ secrets.ACCESS_TOKEN }} 
+          path: my-submodule
+          ref: main
+          pr_branch: main 
+          target_branch: main
 
     - name: Checkout repository again
       uses: actions/checkout@v4.1.1
