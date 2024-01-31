@@ -16,6 +16,7 @@ jobs:
       uses: mheap/submodule-sync-action@v1
       with:
         path: my-submodule  # Specify the path if you want to checkout to a specific folder
+        token: ${{ secrets.ACCESS }}
         ref: main
         pr_branch: main  # This is not a valid input for actions/checkout. Remove it.
         target_branch: main  # This is not a valid input for actions/checkout. Remove it.
