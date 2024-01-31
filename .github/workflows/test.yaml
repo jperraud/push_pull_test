@@ -15,9 +15,10 @@ jobs:
         path: my-submodule  # Specify the path if you want to checkout to a specific folder
         token: ${{ secrets.ACCESS }}
         ref: main
-        pr_branch: automated-submodule-update  # This is not a valid input for actions/checkout. Remove it.
+        pr_branch: main  # This is not a valid input for actions/checkout. Remove it.
         target_branch: main  # This is not a valid input for actions/checkout. Remove it.
-
+        base_branch: main
+          
     - name: Checkout repository again
       uses: actions/checkout@v4.1.1
       with:
