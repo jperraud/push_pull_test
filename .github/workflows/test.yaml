@@ -8,6 +8,7 @@ on:
 jobs:
   add-file-and-display:
     runs-on: ubuntu-latest
+    permissions: write
 
     steps:
     - uses: actions/checkout@v4
