@@ -11,9 +11,9 @@ jobs:
     permissions: 
       contents: write
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.1.1
     - run: |
-          echo "Content to be added" > new_file_for_amir2.txt
+          echo "Content to be added" > new_file2.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
@@ -21,7 +21,7 @@ jobs:
           git push
 
     - name: Checkout repository again
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4.1.1
 
     - name: Display folder contents
       run: ls
