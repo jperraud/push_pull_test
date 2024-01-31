@@ -22,6 +22,8 @@ jobs:
 
     - name: Checkout repository again
       uses: actions/checkout@v4.1.1
+      with:
+        ref: main
 
     - name: Display folder contents
       run: ls
