@@ -1,9 +1,6 @@
 name: Add File and Display Folder Contents
 
 on:
-  push:
-    branches:
-      - main  # or your preferred branch
   workflow_dispatch:
 
 jobs:
